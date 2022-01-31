@@ -2,3 +2,53 @@ select{
     width: 100%;
     border-radius: 7px;
 }
+
+/* card alert*/
+#card-alert{
+    background-color: #FFE933;
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+#card-alert h5{
+    text-align: center;
+    color: rgb(32, 31, 31);
+}
+
+#card-alert p{
+    text-align: center;
+    color:rgb(32, 31, 31)
+}
+
+/*navbar*/
+
+#navbar {
+    justify-content: right;
+    padding: 5px 0;
+}
+
+/*create alert*/
+
+#linha-horizontal {
+    width: 100%;
+    border: 1px solid rgb(200, 195, 195);
+    margin-bottom: 25px;
+}
+
+#alert-create-container{
+    padding: 30px;
+}
+
+#alert-create-container{
+    font-weight: bold;
+}
+
+#alert-create-container .btn{
+    margin-top: 20px;
+
+}
+
