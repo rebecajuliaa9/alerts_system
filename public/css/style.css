@@ -1,7 +1,13 @@
-select{
+.msg{
+    background-color: #d4edd4;
+    color: #155724;
+    border: 1px solid #c3e6cb;
     width: 100%;
-    border-radius: 7px;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
 }
+
 
 /* card alert*/
 #card-alert{
@@ -11,6 +17,8 @@ select{
     margin-right: 20%;
     margin-bottom: 20px;
     margin-top: 20px;
+    text-align: center;
+    
 
 }
 
@@ -50,5 +58,9 @@ select{
 #alert-create-container .btn{
     margin-top: 20px;
 
+}
+
+#alert-container form{
+    display:inline-block;
 }
 

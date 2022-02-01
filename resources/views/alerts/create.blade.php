@@ -15,7 +15,7 @@
                 <label for="description">Descrição</label>
                 <textarea class="form-control" id="description" name="description" placeholder="Descrição do alerta" required></textarea>
             </div>
-            <input type="submit" class="btn btn-primary" value="Criar Evento">
+            <input type="submit" class="btn btn-primary" value="Criar Alerta">
     </form>
 </div>
 @endsection

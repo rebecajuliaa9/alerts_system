@@ -21,6 +21,7 @@ class AlertController extends Controller
     public function show(){
         $alerts = Alert::all();
 
+
         return view ('alerts.show', ['alerts'=> $alerts]);
     }
     public function store(Request $request){
@@ -38,5 +39,22 @@ class AlertController extends Controller
         $alerts = Alert::all();
         return view('alerts.show', ['alerts'=> $alerts]);
 
+    }
+
+    public function destroy($id){
+        Alert::findOrFail($id)->delete();
+        return redirect('/alerts/show')->with('msg','O alerta foi excluído com sucesso!');
+    }
+
+    public function edit($id){
+        $alert = Alert::findOrFail($id);
+
+        return view('alerts.edit', ['alert' => $alert]);
+    }
+
+    public function update(Request $request){
+        Alert::findOrFail($request->id)->update($request->all());
+
+        return redirect('/alerts/show')->with('msg', 'O alerta foi editado com sucesso!');
     }
 }
