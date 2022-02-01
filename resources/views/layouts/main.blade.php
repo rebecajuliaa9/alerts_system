@@ -25,14 +25,11 @@
                         <a href="/alerts/show" class="nav-link">Alertas</a>
                     </li>
                 <!--Colocar um if para verifiar qual o type do user e habilitar os botões-->
-                    
+                    @if(auth()->user()->typeuser===1)
                     <li class="nav-item">
                         <a href="/alerts/create" class="nav-link">Cadastrar</a>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a href="/dashboard" class="nav-link">Meus Alertas</a>
-                    </li>
+                    @endif
                     <li class="nav-item">
                         <form action="/logout" method="POST">
                             @csrf

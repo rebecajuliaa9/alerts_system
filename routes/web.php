@@ -13,11 +13,23 @@ use App\Http\Controllers\AlertController;
 |
 */
 
-Route::get('/', [AlertController::class, 'index']);
-Route::get('/alerts/create', [AlertController::class, 'create']);
-Route::get('/alerts/show', [AlertController::class, 'show']);
-Route::post('/alerts', [AlertController::class, 'store']);
+Route::get('/', [AlertController::class, 'index'])->middleware('auth');
+Route::get('/alerts/show', [AlertController::class, 'show'])->middleware('auth');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['admin'])->group(function(){
+    route::get('admin', function(){});
+    Route::post('/alerts', [AlertController::class, 'store'])->middleware('auth');
+    Route::get('/alerts/create', [AlertController::class, 'create'])->middleware('auth');
+    //Route::get('/alerts/show', [AlertController::class, 'show'])->middleware('auth');
+
+});
+
+Route::middleware(['user'])->group(function(){
+    //Route::get('/alerts/show', [AlertController::class, 'show'])->middleware('auth');
+
+});
