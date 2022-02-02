@@ -10,11 +10,11 @@
         @method('PUT')
             <div class="form-group">
                 <label for="title">Título</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Título" value="{{$alert->title}}">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Título" value="{{$alert->title}}" required>
             </div>
             <div class="form-group">
                 <label for="description">Descrição</label>
-                <textarea class="form-control" id="description" name="description" placeholder="Descrição do alerta" >{{$alert->description}}</textarea>
+                <textarea class="form-control" id="description" name="description" placeholder="Descrição do alerta" required >{{$alert->description}}</textarea>
             </div>
             <input type="submit" class="btn btn-primary" value="Editar Alerta">
     </form>

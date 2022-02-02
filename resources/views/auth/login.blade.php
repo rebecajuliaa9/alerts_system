@@ -31,11 +31,8 @@
                     <span class="ml-2 text-sm text-gray-600">{{ __('Lembrar-me') }}</span>
                 </label>
             </div>
-            @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Já possui uma senha?') }}
-                    </a>
-                @endif
+            
+            
 
             <div class="flex items-center mt-4">
             <x-jet-button class="ml-4">

@@ -11,7 +11,8 @@ use App\Models\Alert;
 class AlertController extends Controller
 {
     public function index(){
-        $alerts = Alert::all();
+        //$alerts = Alert::all();
+        $alerts = Alert::orderBy('created_at', 'desc')->get();
 
         return view ('welcome', ['alerts'=> $alerts]);
     }
@@ -19,9 +20,9 @@ class AlertController extends Controller
         return view ('alerts.create');
     }
     public function show(){
-        $alerts = Alert::all();
+        //$alerts = Alert::all();
 
-
+        $alerts = Alert::orderBy('created_at', 'desc')->get();
         return view ('alerts.show', ['alerts'=> $alerts]);
     }
     public function store(Request $request){
@@ -35,9 +36,9 @@ class AlertController extends Controller
     
 
         $alert->save();
-
-        $alerts = Alert::all();
-        return view('alerts.show', ['alerts'=> $alerts]);
+        $alerts = Alert::orderBy('created_at', 'desc')->get();
+        //$alerts = Alert::all();
+        return redirect('/alerts/show');
 
     }
 

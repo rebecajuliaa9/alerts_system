@@ -5,6 +5,7 @@
         <div class="col-md-12" style="font-size:30px;">Cadastro</div>
 
         </x-slot>
+        <x-jet-validation-errors class="mb-4" />
 
 
         <form method="POST" action="{{ route('register') }}">
@@ -36,6 +37,7 @@
                 <x-jet-label for="password_confirmation" value="{{ __('Confirmação de senha') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
+            
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">

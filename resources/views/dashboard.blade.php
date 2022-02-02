@@ -30,7 +30,7 @@
     </div>
     @endforeach
     @else
-    <p class="col-md-10 offset-md-1">Você ainda não tem alertas, <a href="/alerts/create">Criar Alerta</a></p>
+    <p class="col-md-10 offset-md-1">Você ainda não tem alertas.</p>
     @endif
 </div>
 
